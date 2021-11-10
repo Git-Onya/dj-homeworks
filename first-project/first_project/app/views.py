@@ -9,8 +9,8 @@ def home_view(request):
     template_name = 'app/home.html'
     pages = {
         'Главная страница': reverse('home'),
-        'Показать текущее время': 'current_time/',
-        'Показать содержимое рабочей директории': 'workdir/'
+        'Показать текущее время': reverse('time'),
+        'Показать содержимое рабочей директории': reverse('workdir')
     }
 
     context = {
