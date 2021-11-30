@@ -1,20 +1,20 @@
 [
   {
     "model": "books.book",
-    "pk": 1,
+    "pk": 3,
     "fields": {
-      "name": "Война и мир",
-      "author": "Ф.Д. Достоевский",
-      "pub_date": "2018-02-27"
+      "name": "Сияние",
+      "author": "Стивен Кинг",
+      "pub_date": "2018-09-10"
     }
   },
   {
     "model": "books.book",
-    "pk": 2,
+    "pk": 4,
     "fields": {
-      "name": "1984",
+      "name": "Скотный двор",
       "author": "Джордж Оруэл",
-      "pub_date": "2016-12-06"
+      "pub_date": "2018-09-21"
     }
   }
 ]
