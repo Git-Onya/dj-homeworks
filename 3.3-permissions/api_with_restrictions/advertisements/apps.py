@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class AdvertisementsConfig(AppConfig):
+class AdvertisementConfig(AppConfig):
     name = 'advertisements'
