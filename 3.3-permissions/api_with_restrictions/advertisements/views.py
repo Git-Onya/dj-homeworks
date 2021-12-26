@@ -4,7 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from .models import Advertisement
 from .serializers import AdvertisementSerializer
 from .filters import AdvertisementFilter
-from .permissions import IsOwner
+from .permissions import IsOwner, IsDraft
 
 
 class AdvertisementViewSet(ModelViewSet):
@@ -18,6 +18,8 @@ class AdvertisementViewSet(ModelViewSet):
         """Получение прав для действий."""
         if self.request.user.is_staff:
             return []
+        if self.action == "retrieve":
+            return [IsDraft()]
         if self.action == "create":
             return [IsAuthenticated()]
         if self.action in ["update", "partial_update", "destroy"]:
